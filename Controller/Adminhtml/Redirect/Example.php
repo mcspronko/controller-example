@@ -2,19 +2,30 @@
 
 declare(strict_types=1);
 
-namespace MageMastery\ControllerExample\Controller\Adminhtml;
+namespace MageMastery\ControllerExample\Controller\Adminhtml\Redirect;
 
 use Magento\Backend\Model\UrlInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\Result\RedirectFactory;
 use Magento\Framework\Controller\ResultInterface;
 
-class RedirectExampleController implements HttpGetActionInterface
+class Example implements HttpGetActionInterface
 {
-    private RedirectFactory $redirectFactory;
+    /**
+     * @var RedirectFactory
+     */
+    private $redirectFactory;
 
-    private UrlInterface $url;
+    /**
+     * @var UrlInterface
+     */
+    private $url;
 
+    /**
+     * Example constructor.
+     * @param RedirectFactory $redirectFactory
+     * @param UrlInterface $url
+     */
     public function __construct(
         RedirectFactory $redirectFactory,
         UrlInterface $url
@@ -26,6 +37,6 @@ class RedirectExampleController implements HttpGetActionInterface
     public function execute(): ResultInterface
     {
         return $this->redirectFactory->create()
-            ->setUrl($this->url->getUrl('admin/*/*'));
+            ->setUrl($this->url->getUrl('cms/page'));
     }
 }

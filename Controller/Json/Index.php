@@ -2,16 +2,19 @@
 
 declare(strict_types=1);
 
-namespace MageMastery\ControllerExample\Controller;
+namespace MageMastery\ControllerExample\Controller\Json;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\Result\Json;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Controller\ResultFactory;
 
-class JsonExample implements HttpGetActionInterface
+class Index implements HttpGetActionInterface
 {
-    private ResultFactory $resultFactory;
+    /**
+     * @var ResultFactory
+     */
+    private $resultFactory;
 
     /**
      * JsonExample constructor.

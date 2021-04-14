@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="magemastery_controller_example" frontName="mm">
-            <module name="MageMastery_ControllerExample" />
+            <module name="MageMastery_ControllerExample" before="Magento_Backend" />
         </route>
     </router>
 </config>
