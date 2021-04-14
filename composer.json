@@ -1,0 +1,22 @@
+{
+    "name": "magemastery/controller-example",
+    "description": "Magento 2 Controller examples module",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max Pronko",
+            "email": "max.pronko@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageMastery\\ControllerExample\\": ""
+        }
+    }
+}
